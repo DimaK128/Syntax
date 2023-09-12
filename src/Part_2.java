@@ -1,6 +1,6 @@
 public class Part_2 {
     public static void main(String[] args) {
-        int number = 10;
+        int number = 22;
 
         int doubled = doubleNumber(number);
         System.out.println("Doubled number: " + doubled);
