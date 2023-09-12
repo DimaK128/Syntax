@@ -1,54 +1,56 @@
 public class Part_1 {
-
     public static void main(String[] args) {
-        // Call myMethod
-        int result = myMethod(5);
-        System.out.println("Result from myMethod: " + result);
+        // Call methods with different types of arguments
+        int sum = add(25, 9);
+        double product = multiply(9, 55);
+        String greeting = createGreeting("Dmitriy");
 
-        // Call myMethod2
-        myMethod2();
+        // Call methods without return values
+        printMessage("How are you feeling? :)");
+        printSumAndProduct(sum, product);
+
+        // Call a method with different types for return values
+        int[] numbers = {89, 55, 92, 41, 6};
+        int maxNumber = findMax(numbers);
+
+        // Handle the returned value
+        System.out.println("The maximum number in the array is: " + maxNumber);
     }
 
-    public static int myMethod(int input) {
-        System.out.println("Inside myMethod");
-        int result = input * 2;
-
-        // Call myMethodNumberTwo
-        myMethodNumberTwo();
-
-        // Call myMethodNumberThree and return the result
-        int subResult = myMethodNumberThree();
-        return result + subResult;
+    // Method with int arguments and an int return value
+    public static int add(int a, int b) {
+        return a + b;
     }
 
-    public static void myMethodNumberTwo() {
-        System.out.println("Inside myMethodNumberTwo");
-        // Perform some specific task for myMethodNumberTwo
+    // Method with double arguments and a double return value
+    public static double multiply(double x, double y) {
+        return x * y;
     }
 
-    public static int myMethodNumberThree() {
-        System.out.println("Inside myMethodNumberThree");
-        // Perform some specific task for myMethodNumberThree
-        return 10;
+    // Method with String argument and a String return value
+    public static String createGreeting(String name) {
+        return "Hello, " + name + "!";
     }
 
-    public static void myMethod2() {
-        System.out.println("\nInside myMethod2");
-
-        // Call myMethodNumber21
-        myMethodNumber21();
-
-        // Call myMethodNumber22
-        myMethodNumber22();
+    // Method without return value (void)
+    public static void printMessage(String message) {
+        System.out.println(message);
     }
 
-    public static void myMethodNumber21() {
-        System.out.println("Inside myMethodNumber21");
-        // Perform some specific task for myMethodNumber21
+    // Method without return value, but with multiple arguments
+    public static void printSumAndProduct(int sum, double product) {
+        System.out.println("Sum: " + sum);
+        System.out.println("Product: " + product);
     }
 
-    public static void myMethodNumber22() {
-        System.out.println("Inside myMethodNumber22");
-        // Perform some specific task for myMethodNumber22
+    // Method with int array argument and an int return value
+    public static int findMax(int[] arr) {
+        int max = arr[0];
+        for (int num : arr) {
+            if (num > max) {
+                max = num;
+            }
+        }
+        return max;
     }
 }
