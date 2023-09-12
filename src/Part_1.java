@@ -6,7 +6,7 @@ public class Part_1 {
         String greeting = createGreeting("Dmitriy");
 
         // Call methods without return values
-        printMessage("How are you feeling? :)");
+        printMessage("How are you feeling today? :)");
         printSumAndProduct(sum, product);
 
         // Call a method with different types for return values
